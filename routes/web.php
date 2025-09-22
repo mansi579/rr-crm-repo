@@ -135,6 +135,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
 
 });
 
+
 Route::get('/candidate-form', [CandidateController::class, 'create'])->name('candidate.create');
 Route::post('/candidate-form', [CandidateController::class, 'store'])->name('candidate.store');
 
