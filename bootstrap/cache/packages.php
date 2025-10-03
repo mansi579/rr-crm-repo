@@ -1,13 +1,13 @@
 <?php return array (
   'barryvdh/laravel-debugbar' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Barryvdh\\Debugbar\\ServiceProvider',
-    ),
     'aliases' => 
     array (
       'Debugbar' => 'Barryvdh\\Debugbar\\Facades\\Debugbar',
+    ),
+    'providers' => 
+    array (
+      0 => 'Barryvdh\\Debugbar\\ServiceProvider',
     ),
   ),
   'barryvdh/laravel-dompdf' => 
@@ -31,13 +31,13 @@
   ),
   'berkayk/onesignal-laravel' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Berkayk\\OneSignal\\OneSignalServiceProvider',
-    ),
     'aliases' => 
     array (
       'OneSignal' => 'Berkayk\\OneSignal\\OneSignalFacade',
+    ),
+    'providers' => 
+    array (
+      0 => 'Berkayk\\OneSignal\\OneSignalServiceProvider',
     ),
   ),
   'billowapp/payfast' => 
@@ -67,13 +67,13 @@
   ),
   'edujugon/push-notification' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Edujugon\\PushNotification\\Providers\\PushNotificationServiceProvider',
-    ),
     'aliases' => 
     array (
       'PushNotification' => 'Edujugon\\PushNotification\\Facades\\PushNotification',
+    ),
+    'providers' => 
+    array (
+      0 => 'Edujugon\\PushNotification\\Providers\\PushNotificationServiceProvider',
     ),
   ),
   'froiden/envato' => 
@@ -99,24 +99,24 @@
   ),
   'hisorange/browser-detect' => 
   array (
-    'providers' => 
-    array (
-      0 => 'hisorange\\BrowserDetect\\ServiceProvider',
-    ),
     'aliases' => 
     array (
       'Browser' => 'hisorange\\BrowserDetect\\Facade',
     ),
+    'providers' => 
+    array (
+      0 => 'hisorange\\BrowserDetect\\ServiceProvider',
+    ),
   ),
   'intervention/image' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Intervention\\Image\\ImageServiceProvider',
-    ),
     'aliases' => 
     array (
       'Image' => 'Intervention\\Image\\Facades\\Image',
+    ),
+    'providers' => 
+    array (
+      0 => 'Intervention\\Image\\ImageServiceProvider',
     ),
   ),
   'ivanomatteo/laravel-device-tracking' => 
@@ -199,13 +199,13 @@
   ),
   'laravel/socialite' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Laravel\\Socialite\\SocialiteServiceProvider',
-    ),
     'aliases' => 
     array (
       'Socialite' => 'Laravel\\Socialite\\Facades\\Socialite',
+    ),
+    'providers' => 
+    array (
+      0 => 'Laravel\\Socialite\\SocialiteServiceProvider',
     ),
   ),
   'laravel/tinker' => 
@@ -217,13 +217,13 @@
   ),
   'laravel/vonage-notification-channel' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Illuminate\\Notifications\\VonageChannelServiceProvider',
-    ),
     'aliases' => 
     array (
       'Vonage' => 'Illuminate\\Notifications\\Facades\\Vonage',
+    ),
+    'providers' => 
+    array (
+      0 => 'Illuminate\\Notifications\\VonageChannelServiceProvider',
     ),
   ),
   'laravelcollective/html' => 
@@ -240,77 +240,77 @@
   ),
   'maatwebsite/excel' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
-    ),
     'aliases' => 
     array (
       'Excel' => 'Maatwebsite\\Excel\\Facades\\Excel',
     ),
+    'providers' => 
+    array (
+      0 => 'Maatwebsite\\Excel\\ExcelServiceProvider',
+    ),
   ),
   'macellan/laravel-zip' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Macellan\\Zip\\ZipServiceProvider',
-    ),
     'aliases' => 
     array (
       'Zip' => 'Macellan\\Zip\\ZipFacade',
     ),
+    'providers' => 
+    array (
+      0 => 'Macellan\\Zip\\ZipServiceProvider',
+    ),
   ),
   'macsidigital/laravel-api-client' => 
   array (
+    'aliases' => 
+    array (
+    ),
     'providers' => 
     array (
       0 => 'MacsiDigital\\API\\Providers\\APIServiceProvider',
     ),
-    'aliases' => 
-    array (
-    ),
   ),
   'macsidigital/laravel-oauth2-client' => 
   array (
+    'aliases' => 
+    array (
+    ),
     'providers' => 
     array (
       0 => 'MacsiDigital\\OAuth2\\Providers\\OAuth2ServiceProvider',
     ),
-    'aliases' => 
-    array (
-    ),
   ),
   'macsidigital/laravel-zoom' => 
   array (
-    'providers' => 
-    array (
-      0 => 'MacsiDigital\\Zoom\\Providers\\ZoomServiceProvider',
-    ),
     'aliases' => 
     array (
       'Zoom' => 'MacsiDigital\\Zoom\\Facades\\Zoom',
     ),
+    'providers' => 
+    array (
+      0 => 'MacsiDigital\\Zoom\\Providers\\ZoomServiceProvider',
+    ),
   ),
   'mitchbred/entrust' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Trebol\\Entrust\\EntrustServiceProvider',
-    ),
     'aliases' => 
     array (
       'Entrust' => 'Trebol\\Entrust\\EntrustFacade',
     ),
+    'providers' => 
+    array (
+      0 => 'Trebol\\Entrust\\EntrustServiceProvider',
+    ),
   ),
   'mollie/laravel-mollie' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Mollie\\Laravel\\MollieServiceProvider',
-    ),
     'aliases' => 
     array (
       'Mollie' => 'Mollie\\Laravel\\Facades\\Mollie',
+    ),
+    'providers' => 
+    array (
+      0 => 'Mollie\\Laravel\\MollieServiceProvider',
     ),
   ),
   'nesbot/carbon' => 
@@ -336,24 +336,24 @@
   ),
   'nwidart/laravel-modules' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Nwidart\\Modules\\LaravelModulesServiceProvider',
-    ),
     'aliases' => 
     array (
       'Module' => 'Nwidart\\Modules\\Facades\\Module',
     ),
+    'providers' => 
+    array (
+      0 => 'Nwidart\\Modules\\LaravelModulesServiceProvider',
+    ),
   ),
   'opcodesio/log-viewer' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Opcodes\\LogViewer\\LogViewerServiceProvider',
-    ),
     'aliases' => 
     array (
       'LogViewer' => 'Opcodes\\LogViewer\\Facades\\LogViewer',
+    ),
+    'providers' => 
+    array (
+      0 => 'Opcodes\\LogViewer\\LogViewerServiceProvider',
     ),
   ),
   'pcinaglia/laraupdater' => 
@@ -365,14 +365,14 @@
   ),
   'sentry/sentry-laravel' => 
   array (
+    'aliases' => 
+    array (
+      'Sentry' => 'Sentry\\Laravel\\Facade',
+    ),
     'providers' => 
     array (
       0 => 'Sentry\\Laravel\\ServiceProvider',
       1 => 'Sentry\\Laravel\\Tracing\\ServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Sentry' => 'Sentry\\Laravel\\Facade',
     ),
   ),
   'spatie/laravel-backup' => 
@@ -384,35 +384,35 @@
   ),
   'spatie/laravel-ignition' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
-    ),
     'aliases' => 
     array (
       'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
     ),
+    'providers' => 
+    array (
+      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
+    ),
   ),
   'spatie/laravel-signal-aware-command' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Spatie\\SignalAwareCommand\\SignalAwareCommandServiceProvider',
-    ),
     'aliases' => 
     array (
       'Signal' => 'Spatie\\SignalAwareCommand\\Facades\\Signal',
     ),
+    'providers' => 
+    array (
+      0 => 'Spatie\\SignalAwareCommand\\SignalAwareCommandServiceProvider',
+    ),
   ),
   'stevebauman/location' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Stevebauman\\Location\\LocationServiceProvider',
-    ),
     'aliases' => 
     array (
       'Location' => 'Stevebauman\\Location\\Facades\\Location',
+    ),
+    'providers' => 
+    array (
+      0 => 'Stevebauman\\Location\\LocationServiceProvider',
     ),
   ),
   'tanmuhittin/laravel-google-translate' => 
@@ -424,35 +424,35 @@
   ),
   'unicodeveloper/laravel-paystack' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Unicodeveloper\\Paystack\\PaystackServiceProvider',
-    ),
     'aliases' => 
     array (
       'Paystack' => 'Unicodeveloper\\Paystack\\Facades\\Paystack',
     ),
+    'providers' => 
+    array (
+      0 => 'Unicodeveloper\\Paystack\\PaystackServiceProvider',
+    ),
   ),
   'webklex/laravel-imap' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Webklex\\IMAP\\Providers\\LaravelServiceProvider',
-    ),
     'aliases' => 
     array (
       'Client' => 'Webklex\\IMAP\\Facades\\Client',
     ),
+    'providers' => 
+    array (
+      0 => 'Webklex\\IMAP\\Providers\\LaravelServiceProvider',
+    ),
   ),
   'webklex/laravel-pdfmerger' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Webklex\\PDFMerger\\Providers\\PDFMergerServiceProvider',
-    ),
     'aliases' => 
     array (
       'PDFMerger' => 'Webklex\\PDFMerger\\Facades\\PDFMergerFacade',
+    ),
+    'providers' => 
+    array (
+      0 => 'Webklex\\PDFMerger\\Providers\\PDFMergerServiceProvider',
     ),
   ),
   'yajra/laravel-datatables-buttons' => 
@@ -471,13 +471,13 @@
   ),
   'yajra/laravel-datatables-oracle' => 
   array (
-    'providers' => 
-    array (
-      0 => 'Yajra\\DataTables\\DataTablesServiceProvider',
-    ),
     'aliases' => 
     array (
       'DataTables' => 'Yajra\\DataTables\\Facades\\DataTables',
+    ),
+    'providers' => 
+    array (
+      0 => 'Yajra\\DataTables\\DataTablesServiceProvider',
     ),
   ),
 );
