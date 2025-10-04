@@ -424,6 +424,7 @@ return [
     'addTemplate' => 'Добавяне на шаблон',
     'privateDashboard' => 'Частно табло за управление',
     'advanceDashboard' => 'Разширено табло за управление',
+    'LeadDashboard' => 'Табло за управление на потенциални клиенти',
     'contractSettings' => 'Настройки на договора',
     'editDepartment' => 'Отдел за редактиране',
     'editdesignation' => 'Редактиране на обозначението',

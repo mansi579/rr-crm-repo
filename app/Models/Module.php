@@ -1645,6 +1645,31 @@ class Module extends BaseModel
             ]
         ],
         [
+            'module_name' => 'Lead Dashboard',
+            'permissions' => [
+                [
+                    'allowed_permissions' => Permission::ALL_NONE,
+                    'is_custom' => 0,
+                    'name' => 'total_leads',
+                ],
+                [
+                    'allowed_permissions' => Permission::ALL_NONE,
+                    'is_custom' => 0,
+                    'name' => 'registered_leads',
+                ],
+                [
+                    'allowed_permissions' => Permission::ALL_NONE,
+                    'is_custom' => 0,
+                    'name' => 'open_leads',
+                ],  
+                [
+                    'allowed_permissions' => Permission::ALL_NONE,
+                    'is_custom' => 0,
+                    'name' => 'open_invoices',
+                ],
+            ]
+        ]
+        [
             'module_name' => 'orders',
             'permissions' => [
                 [

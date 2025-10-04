@@ -422,6 +422,7 @@ return array(
         'addTemplate' => 'Add Template',
         'privateDashboard' => 'Private Dashboard',
         'advanceDashboard' => 'Advanced Dashboard',
+        'leadDashboard' => 'Lead Dashboard',
         'contractSettings' => 'Contract Settings',
         'editDepartment' => 'Edit Department',
         'editdesignation' => 'Edit Designation',
@@ -1228,6 +1229,7 @@ return array(
     'moduleNotifySwitchMessage' => 'This will hide/show new update message on dashboard for :name module',
     'leadContact' => 'Lead Contact',
     'deal' => 'Deals',
+    'visa_lead' => 'visa_lead',
     'maritalStatus' => array(
         'single' => 'Single',
         'married' => 'Married',

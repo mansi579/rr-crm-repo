@@ -183,6 +183,21 @@ class DashboardController extends AccountBaseController
         }
     }
 
+    public function leadDashboard()
+    {
+        return view ('dashboard.lead', $this->data);
+        // if (in_array('admin', user_roles()) || $this->sidebarUserPermissions['view_lead_dashboard'] == 4) {
+        //     $this->leadDashboardData();
+
+        //     if (request()->ajax()) {
+        //         return $this->returnAjax($this->view);
+        //     }
+
+        //     return view('dashboard.lead', $this->data);
+        // }
+        // abort_403();
+    }
+
     public function accountUnverified()
     {
         return view('dashboard.unverified', $this->data);

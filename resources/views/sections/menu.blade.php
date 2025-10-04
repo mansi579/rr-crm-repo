@@ -20,6 +20,8 @@
                                  :text="__('app.menu.privateDashboard')" />
                 <x-sub-menu-item :link="route('dashboard.advanced')"
                                  :text="__('app.menu.advanceDashboard')" />
+                <x-sub-menu-item :link="route('dashboard.lead')"
+                                 :text="__('app.menu.leadDashboard')" />
             </div>
         </x-menu-item>
     @else

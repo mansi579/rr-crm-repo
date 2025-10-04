@@ -424,6 +424,7 @@ return [
     'addTemplate' => 'إضافة قالب',
     'privateDashboard' => 'لوحة القيادة الخاصة',
     'advanceDashboard' => 'لوحة القيادة المتقدمة',
+    'leadDashboard' => 'لوحة معلومات العميل المحتمل',
     'contractSettings' => 'إعدادات العقد',
     'editDepartment' => 'قسم التحرير',
     'editdesignation' => 'تحرير التعيين',
