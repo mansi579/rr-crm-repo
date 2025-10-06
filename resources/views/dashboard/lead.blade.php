@@ -102,9 +102,10 @@
         }
 
         .box-bottom canvas {
-            width: 206px !important;
+            /* width: 206px !important; */
             height: 206px !important;
-            margin: 0 auto;
+            margin: 0 4px 10px 13px;
+            /* margin: 0 10px 10px auto; */
             display: block;
         }
 
