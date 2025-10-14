@@ -124,6 +124,7 @@ use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CandidateController;
 use App\Http\Controllers\ImmigrationController;
+use App\Http\Controllers\LeadLatestController;
 
 Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
 
@@ -145,12 +146,15 @@ Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact
 Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
     Route::post('image/upload', [ImageController::class, 'store'])->name('image.store');
 
-
+    // Route::resource('visa', LeadLatestController::class);
     Route::get('account-unverified', [DashboardController::class, 'accountUnverified'])->name('account_unverified');
     Route::get('checklist', [DashboardController::class, 'checklist'])->name('checklist');
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('dashboard-advanced', [DashboardController::class, 'advancedDashboard'])->name('dashboard.advanced');
     Route::get('lead-dashboard', [DashboardController::class, 'leadDashboard'])->name('dashboard.lead');
+  
+    Route::get('visa-index', [DashboardController::class, 'visaindex'])->name('dashboard.visa.index');
+    Route::get('visa-create', [DashboardController::class, 'visaCreate'])->name('dashboard.visa.create');
 
     Route::post('dashboard/widget/{dashboardType}', [DashboardController::class, 'widget'])->name('dashboard.widget');
     Route::post('dashboard/week-timelog', [DashboardController::class, 'weekTimelog'])->name('dashboard.week_timelog');
@@ -880,5 +884,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
 
     Route::post('gantt_link.task_update', [GanttLinkController::class, 'taskUpdateController'])->name('gantt_link.task_update');
     Route::resource('gantt_link', GanttLinkController::class);
+
+    Route::resource('lead-v1', LeadLatestController::class);
 
 });

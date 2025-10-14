@@ -198,6 +198,17 @@ class DashboardController extends AccountBaseController
         // abort_403();
     }
 
+    public function visaindex()
+    {
+        return view('dashboard.visa.index', $this->data);
+    }
+
+    public function visaCreate()
+    {
+        return view('dashboard.visa.create', $this->data);
+    }
+
+
     public function accountUnverified()
     {
         return view('dashboard.unverified', $this->data);
