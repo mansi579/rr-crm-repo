@@ -29,6 +29,8 @@ use Carbon\CarbonPeriod;
 use Froiden\Envato\Traits\AppBoot;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
+
 
 class DashboardController extends AccountBaseController
 {
@@ -206,6 +208,40 @@ class DashboardController extends AccountBaseController
     public function visaCreate()
     {
         return view('dashboard.visa.create', $this->data);
+    }
+
+    public function loadSection($section)
+    {
+        try {
+            $validSections = [
+                'personal_details',
+                'passport_details',
+                'relative_contact_information',
+                'family_information',
+                'education',
+                'client_preference',
+                'professional_experience',
+                'property_details',
+                'financial_status',
+                'travel_details',
+            ];
+
+            if (!in_array($section, $validSections)) {
+                return response()->json(['error' => 'Invalid section'], 404);
+            }
+
+            $viewPath = "dashboard.visa.forms.$section"; 
+            if (View::exists($viewPath)) {
+                $html = view($viewPath)->render();
+                return response()->json(['html' => $html]);
+            }
+
+            return response()->json(['error' => 'View not found: ' . $viewPath], 404);
+
+        } catch (\Throwable $e) {
+            Log::error('Error loading section', ['message' => $e->getMessage()]);
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     }
 
 

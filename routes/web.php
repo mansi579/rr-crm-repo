@@ -146,7 +146,6 @@ Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact
 Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
     Route::post('image/upload', [ImageController::class, 'store'])->name('image.store');
 
-    // Route::resource('visa', LeadLatestController::class);
     Route::get('account-unverified', [DashboardController::class, 'accountUnverified'])->name('account_unverified');
     Route::get('checklist', [DashboardController::class, 'checklist'])->name('checklist');
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -155,6 +154,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
   
     Route::get('visa-index', [DashboardController::class, 'visaindex'])->name('dashboard.visa.index');
     Route::get('visa-create', [DashboardController::class, 'visaCreate'])->name('dashboard.visa.create');
+
+    Route::get('form/{section}', [DashboardController::class, 'loadSection'])->name('lead.add.form');
 
     Route::post('dashboard/widget/{dashboardType}', [DashboardController::class, 'widget'])->name('dashboard.widget');
     Route::post('dashboard/week-timelog', [DashboardController::class, 'weekTimelog'])->name('dashboard.week_timelog');

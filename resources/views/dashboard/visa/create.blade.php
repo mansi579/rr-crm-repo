@@ -159,263 +159,63 @@
     <div class="lead-number">LEAD 0009</div>
   </div>
   <main class="container-fluid">
-
-    <!-- Tabs -->
+    <!-- Tabs (unchanged styles) -->
     <div class="tabs-container mb-4">
-      <div class="tab-item active">
-        <div class="tab-icon">
-          <i class="bi bi-person"></i>
-        </div>
-        <a href="Personal_Details.html">Personal Details</a>
+      <div class="tab-item active" data-section="personal_details">
+        <div class="tab-icon"><i class="bi bi-person"></i></div>
+        <a href="javascript:void(0)">Personal Details</a>
       </div>
-      <div class="tab-item">
-        <div class="tab-icon">
-          <i class="bi bi-passport"></i>
-        </div>
-        <a href="Passport_Details.html">Passport Details</a>
+      <div class="tab-item" data-section="passport_details">
+        <div class="tab-icon"><i class="bi bi-passport"></i></div>
+        <a href="javascript:void(0)">Passport Details</a>
       </div>
-      <div class="tab-item">
-        <div class="tab-icon">
-          <i class="bi bi-person-lines-fill"></i>
-        </div>
-        <a href="Relative_Contact_Information.html">Relative Contact Information</a>
+      <div class="tab-item" data-section="relative_contact_information">
+        <div class="tab-icon"><i class="bi bi-person-lines-fill"></i></div>
+        <a href="javascript:void(0)">Relative Contact Information</a>
       </div>
-      <div class="tab-item">
-        <div class="tab-icon">
-          <i class="bi bi-people"></i>
-        </div>
-        <a href="Family_Information.html">Family Information</a>
+      <div class="tab-item" data-section="family_information">
+        <div class="tab-icon"><i class="bi bi-people"></i></div>
+        <a href="javascript:void(0)">Family Information</a>
       </div>
-      <div class="tab-item">
-        <div class="tab-icon">
-          <i class="bi bi-mortarboard"></i>
-        </div>
-        <a href="Education.html">Education</a>
+      <div class="tab-item" data-section="education">
+        <div class="tab-icon"><i class="bi bi-mortarboard"></i></div>
+        <a href="javascript:void(0)">Education</a>
       </div>
-      <div class="tab-item">
-        <div class="tab-icon">
-          <i class="bi bi-briefcase"></i>
-        </div>
-        <a href="Client_Preference.html">Client Preference</a>
+
+      <div class="tab-item" data-section="client_preference">
+        <div class="tab-icon"><i class="bi bi-briefcase"></i></div>
+        <a href="javascript:void(0)">Client Preference</a>
       </div>
-      <div class="tab-item">
-        <div class="tab-icon">
-          <i class="bi bi-person-workspace"></i>
-        </div>
-        <a href="Professional_Experience.html">Professional Experience</a>
+
+      <div class="tab-item" data-section="professional_experience">
+        <div class="tab-icon"><i class="bi bi-person-workspace"></i></div>
+        <a href="javascript:void(0)">Professional Experience</a>
       </div>
-      <div class="tab-item">
-        <div class="tab-icon">
-          <i class="bi bi-building"></i>
-        </div>
-        <a href="Property_Details.html">Property Details</a>
+
+      <div class="tab-item" data-section="property_details">
+        <div class="tab-icon"><i class="bi bi-building"></i></div>
+        <a href="javascript:void(0)">Property Details</a>
       </div>
-      <div class="tab-item">
-        <div class="tab-icon">
-          <i class="bi bi-building"></i>
-        </div>
-        <a href="Financial_Status.html">Financial Status</a>
+
+      <div class="tab-item" data-section="financial_status">
+        <div class="tab-icon"><i class="bi bi-cash-stack"></i></div>
+        <a href="javascript:void(0)">Financial Status</a>
       </div>
-      <div class="tab-item">
-        <div class="tab-icon">
-          <i class="bi bi-building"></i>
-        </div>
-        <a href="Travel_Details.html">Travel Details</a>
+
+      <div class="tab-item" data-section="travel_details">
+        <div class="tab-icon"><i class="bi bi-airplane"></i></div>
+        <a href="javascript:void(0)">Travel Details</a>
       </div>
+      <!-- Add more tabs as needed -->
     </div>
 
-    <!-- Form Card -->
-    <div class="form-card">
-      <form>
-        <!-- Personal Details -->
-        <div class="row g-3">
-          <div class="col-md-3">
-            <label class="form-label">Surname</label>
-            <input type="text" class="form-control">
-          </div>
-          <div class="col-md-3">
-            <label class="form-label">Given Name</label>
-            <input type="text" class="form-control">
-          </div>
-          <div class="col-md-3">
-            <label class="form-label">Gender</label>
-            <select class="form-select">
-              <option selected disabled>Select</option>
-              <option>Male</option>
-              <option>Female</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="col-md-3">
-            <label class="form-label">Marital Status</label>
-            <select class="form-select">
-              <option selected disabled>Select</option>
-              <option>Single</option>
-              <option>Married</option>
-              <option>Divorced</option>
-              <option>Widowed</option>
-            </select>
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">Date of Birth</label>
-            <input type="date" class="form-control">
-          </div>
-          <div class="col-md-3">
-            <label class="form-label">Country of Origin (Nationality)</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-        <hr>
-        <!-- Home Address -->
-        <div class="row g-3">
-          <div class="col-md-3">
-            <label class="form-label">Home Address</label>
-            <input type="text" class="form-control">
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">City</label>
-            <input type="text" class="form-control">
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">State</label>
-            <input type="text" class="form-control">
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">Pin Code</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-        <hr>
-        <!-- Mailing Address -->
-        <div class="row g-3">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="visaStatus" id="visaGrantedq">
-            <label class="form-check-label" for="visaGrantedq">Mailing Address As Above</label>
-          </div>
-          <div class="col-md-3">
-            <label class="form-label">Mailing Address</label>
-            <input type="text" class="form-control">
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">City</label>
-            <input type="text" class="form-control">
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">State</label>
-            <input type="text" class="form-control">
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">Pin Code</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-        <hr>
-        <!-- Contact Details -->
-        <div class="row g-3">
-          <div class="col-md-3">
-            <label class="form-label">Primary Phone No</label>
-            <input type="tel" maxlength="10" class="form-control">
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">Secondary Phone No</label>
-            <input type="tel" maxlength="10" class="form-control">
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">Work Phone No</label>
-            <input type="tel" maxlength="10" class="form-control">
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">Other Phone No (Used in Last 5 Years)</label>
-            <textarea class="form-control" rows="3"></textarea>
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">Email Address</label>
-            <input type="email" class="form-control">
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">Other Email (Used in Last 5 Years)</label>
-            <textarea class="form-control" rows="3"></textarea>
-          </div>
-
-          <div class="col-md-3">
-            <label class="form-label">Social Media Preference</label>
-            <select class="form-select">
-              <option selected disabled>Select</option>
-              <option>Facebook</option>
-              <option>Instagram</option>
-              <option>LinkedIn</option>
-              <option>Twitter / X</option>
-              <option>Other</option>
-            </select>
-          </div>
-        </div>
-        <hr>
-        <!-- Visa Status -->
-        <div class="form-section">
-          <h6>Last Five Years Visa Status</h6>
-          <div class="row g-3 mt-1">
-            <div class="col-md-3">
-              <input class="form-check-input" type="radio" name="visaStatus" id="visaGranted">
-              <label class="form-check-label" for="visaGranted">Visa Granted</label>
-            </div>
-            <div class="col-md-3">
-              <label class="form-label">Visa Issue Date</label>
-              <input type="month" class="form-control">
-            </div>
-            <div class="col-md-3">
-              <label class="form-label">Visa Expire Date</label>
-              <input type="month" class="form-control">
-            </div>
-            <div class="col-md-3">
-              <label class="form-label">Visa Category</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-          <div class="row g-3 mt-1">
-            <div class="col-md-3">
-              <input class="form-check-input" type="radio" name="visaStatus" id="VisaRefusal">
-              <label class="form-check-label" for="VisaRefusal">Visa Refusal</label>
-            </div>
-            <div class="col-md-3">
-              <label class="form-label">Visa Rejection Date</label>
-              <input type="month" class="form-control">
-            </div>
-            <div class="col-md-3">
-              <label class="form-label">Visa Category</label>
-              <input type="text" class="form-control">
-            </div>
-            <div class="col-md-3 d-flex align-items-end">
-              <button type="button" class="add-document">+ Add More</button>
-            </div>
-
-          </div>
-          <div class="mt-3">
-            <label class="form-label">Reason</label>
-            <textarea class="form-control" rows="2"></textarea>
-          </div>
-        </div>
-        <hr>
-        <div class="form-section">
-          <div class="mt-3">
-            <label class="form-label">Languages Spoken</label>
-            <textarea class="form-control" rows="2"></textarea>
-          </div>
-        </div>
-      </form>
+    <!-- Form content area -->
+    <div id="form-content" class="form-card">
+      <div class="text-center text-muted py-4">Loading...</div>
     </div>
 
+
+   
     <!-- Bottom Buttons -->
     <div class="row align-items-center justify-content-between g-2 bottom-btns">
 
@@ -436,4 +236,41 @@
 
 @push('scripts')
 <script src="{{ asset('Bootstrap_5/JS_v5.3.3.js') }}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+
+    const formContainer = document.getElementById('form-content');
+    const tabs = document.querySelectorAll('.tab-item');
+
+    // Function to load section via AJAX
+    function loadSection(section) {
+        formContainer.innerHTML = `<div class="text-center text-muted py-4">Loading ${section.replace('_', ' ')}...</div>`;
+
+        fetch(`/account/form/${section}`)
+          .then(res => res.json())
+          .then(data => {
+            if (data.html) {
+              formContainer.innerHTML = data.html;
+            } else {
+              formContainer.innerHTML = `<div class="text-danger text-center py-4">Error: ${data.error}</div>`;
+            }
+          })
+          .catch(() => {
+            formContainer.innerHTML = `<div class="text-danger text-center py-4">Failed to load form.</div>`;
+          });
+    }
+
+    // Load default tab (Personal Details)
+    loadSection('personal_details');
+
+    // Tab click event
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        loadSection(tab.dataset.section);
+      });
+    });
+  });
+</script>
 @endpush
