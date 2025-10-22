@@ -10,6 +10,8 @@ use App\Models\Event;
 use App\Models\Holiday;
 use App\Models\LeadPipeline;
 use App\Models\Leave;
+use App\Models\NewLead;
+use App\Models\NewLeadPassport;
 use App\Models\ProjectTimeLog;
 use App\Models\ProjectTimeLogBreak;
 use App\Models\Task;
@@ -244,6 +246,105 @@ class DashboardController extends AccountBaseController
         }
     }
 
+    public function saveSection(Request $request, $section)
+    {
+        // dd($section);
+        try {
+            switch ($section) {
+                case 'personal_details':
+
+                    $validated = $request->validate([
+                        'surname'           => 'nullable|string|max:255',
+                        'given_name'        => 'nullable|string|max:255',
+                        'gender'            => 'nullable|in:male,female,other',
+                        'marital_status'    => 'nullable|string|max:255',
+                        'date_of_birth'     => 'nullable|date',
+                        'country_of_origin' => 'nullable|string|max:255',
+                        'lead_assigned_to'  => 'nullable|exists:users,id',
+                        'address'     => 'nullable|string|max:255',
+                        'city'        => 'nullable|string|max:255',
+                        'state'       => 'nullable|string|max:255',
+                        'pincode'     => 'nullable|string|max:20',
+                        'mail_address'  => 'nullable|string|max:255',
+                        'mail_city'     => 'nullable|string|max:255',
+                        'mail_state'    => 'nullable|string|max:255',
+                        'mail_pincode'  => 'nullable|string|max:20',
+                        'primary_phone'    => 'nullable|string|max:20',
+                        'secondary_phone'  => 'nullable|string|max:20',
+                        'work_phone'       => 'nullable|string|max:20',
+                        'other_phone'      => 'nullable|string|max:20',
+                        'email'            => 'nullable|email|max:255',
+                        'other_email'      => 'nullable|email|max:255',
+                        'social_media'     => 'nullable|string|max:255',
+                    ]);
+
+                    $lead = NewLead::create($validated);
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Personal Details Saved Successfully',
+                        'lead_id' => $lead->id
+                    ]);
+
+                break;
+
+                case 'passport_details':
+                    $validated = $request->validate([
+                        'passport_number' => 'nullable|string|max:20',
+                        'issuing_country'      => 'nullable|date',
+                        'city_used'     => 'nullable|date',
+                        'issue_date'    => 'nullable|string|max:255',
+                        'expire_date'    => 'nullable|string|max:255',
+                        'lost_history' => 'nullable|string|max:255',
+                    ]);
+
+                    $passport = NewLeadPassport::create($validated);
+
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Passport Details Saved Successfully',
+                        'passport_id' => $passport->id
+                    ]);
+
+                break;
+
+                case 'relative_contact_information':
+                break;
+
+                case 'family_information':
+                break;
+
+                case 'education':
+                break;
+
+                case 'client_preference':
+                break;
+
+                case 'professional_experience':
+                break;
+
+                case 'property_details':
+                break;
+
+                case 'financial_status':
+                break;
+
+                case 'travel_details':
+                break;
+
+                default:
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Invalid form section: ' . $section
+                    ], 400);
+            }
+
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage()
+            ], 500);
+        }
+    }
 
     public function accountUnverified()
     {

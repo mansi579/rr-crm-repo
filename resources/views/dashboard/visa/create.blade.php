@@ -272,5 +272,107 @@
       });
     });
   });
+
+  $('.btn-save').on('click', function (e) {
+      e.preventDefault();
+
+      const activeSection = $('.tab-item.active').data('section');
+      const form = $(`#${activeSection}-form`);
+      const formData = new FormData(form[0]);
+
+      $.ajax({
+          url: `/account/save-${activeSection}`,
+          method: 'POST',
+          data: formData,
+          processData: false,
+          contentType: false,
+          headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          },
+          success: function (data) {
+              if (data.success) {
+                  alert(data.message);
+
+                  // Switch to next tab automatically
+                  const nextTab = $('.tab-item.active').next();
+                  if (nextTab.length) nextTab.click();
+              }
+          },
+          error: function (xhr) {
+              console.log(xhr.responseText);
+          }
+      });
+  });
+
+
+  //  $('.btn-save').on('click', function (e) {
+  //       e.preventDefault();
+
+  //       // const activeSection = $('.tab-item.active').data('section');
+
+  //         // const form = $('#personal-details-form');
+  //         // const formData = new FormData(form[0]);
+  //         const activeSection = $('.tab-item.active').data('section');
+
+
+  //         //new code
+  //         const form = $(`#${activeSection}-form`); // form id = personal_details-form
+  //         const formData = new FormData(form[0]);
+  //         console.log("active", activeSection);
+  //         console.log("form", form);
+  //         console.log("formData", formData);                 
+
+  //         $.ajax({
+  //               url: `/account/save-${activeSection}`, // Dynamic URL
+  //               method: 'POST',
+  //               data: formData,
+  //               processData: false,
+  //               contentType: false,
+  //               headers: {
+  //                   'X-CSRF-TOKEN': $('input[name="_token"]').val()
+  //               },
+  //               success: function (data) {
+  //                   if (data.success) {
+  //                       alert('Saved successfully!');
+  //                       // Move to the next tab automatically
+  //                       $('.tab-item[data-section="passport_details"]').click();
+  //                   } else {
+  //                     console.log("error" + data.message);
+  //                 }
+  //               },                
+  //               error: function (xhr, status, error) {
+  //                   console.error(error);
+  //                   console.log("something went wrong while saving");
+  //               }
+  //           });
+        
+  //   });
+
+    $('input[type=radio]').on('mousedown', function (e) {
+        if (this.checked) {
+            $(this).data('wasChecked', true);
+        } else {
+            $(this).data('wasChecked', false);
+            $('input[name="mail_address"]').val('');
+            $('input[name="mail_city"]').val('');
+            $('input[name="mail_state"]').val('');
+            $('input[name="mail_pincode"]').val('');
+        }
+    });
+
+    $(document).on('change', '#mail_as_above', function () {
+      if ($(this).is(':checked')) {
+          $('input[name="mail_address"]').val($('input[name="address"]').val());
+          $('input[name="mail_city"]').val($('input[name="city"]').val());
+          $('input[name="mail_state"]').val($('input[name="state"]').val());
+          $('input[name="mail_pincode"]').val($('input[name="pincode"]').val());
+      } else {
+          $('input[name="mail_address"]').val('');
+          $('input[name="mail_city"]').val('');
+          $('input[name="mail_state"]').val('');
+          $('input[name="mail_pincode"]').val('');
+      }
+    });
+
 </script>
 @endpush

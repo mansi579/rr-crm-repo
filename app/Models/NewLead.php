@@ -9,6 +9,35 @@ class NewLead extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'surname',
+        'given_name',
+        'gender',
+        'marital_status',
+        'date_of_birth',
+        'country_of_origin',
+        'lead_assigned_to',
+
+        'address',
+        'city',
+        'state',
+        'pincode',
+
+        'mail_address',
+        'mail_city',
+        'mail_state',
+        'mail_pincode',
+
+        'primary_phone',
+        'secondary_phone',
+        'work_phone',
+        'other_phone',
+        'email',
+        'other_email',
+        'social_media',
+    ];
+
+
     public function passport() { return $this->hasOne(NewLeadPassport::class); }
     public function visaStatuses() { return $this->hasMany(NewLeadVisaStatus::class); }
     public function relatives() { return $this->hasMany(NewLeadRelative::class); }

@@ -154,7 +154,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
   
     Route::get('visa-index', [DashboardController::class, 'visaindex'])->name('dashboard.visa.index');
     Route::get('visa-create', [DashboardController::class, 'visaCreate'])->name('dashboard.visa.create');
-
+    Route::post('save-{section}', [DashboardController::class, 'saveSection'])->name('lead.save.section');
     Route::get('form/{section}', [DashboardController::class, 'loadSection'])->name('lead.add.form');
 
     Route::post('dashboard/widget/{dashboardType}', [DashboardController::class, 'widget'])->name('dashboard.widget');
